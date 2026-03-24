@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f3f7ff;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #dbe2ea;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.06);
+  --header: #111827;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(180deg, #edf5ff 0%, #f7fbff 65%, #f5f7fa 100%);
+}
+
+body {
+  font-family: Inter, 'Segoe UI', Roboto, system-ui, sans-serif;
+  color: var(--text);
+}
+
+.editor-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.editor-card {
+  width: min(100%, 780px);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+  padding: 1.5rem;
+}
+
+.editor-title {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.editor-textarea {
+  width: 100%;
+  min-height: 420px;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  outline: none;
+  resize: vertical;
+  font: 1rem/1.6 'Inter', sans-serif;
+  color: var(--text);
+  background: #fff;
+}
+
+.editor-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.editor-actions {
+  margin-bottom: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editor-btn {
+  padding: 0.56rem 0.9rem;
+  font-size: 0.86rem;
+  border-radius: 0.65rem;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background-color 0.15s ease, color 0.15s ease;
+}
+
+.editor-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.editor-btn-primary {
+  border-color: #1d4ed8;
+  color: #1d4ed8;
+  background: rgba(29, 78, 216, 0.08);
+}
+
+.editor-btn-primary:hover {
+  background: rgba(29, 78, 216, 0.14);
+}
+
+.editor-btn-clear {
+  border-color: #d1d5db;
+  color: #6b7280;
+  background: rgba(229, 231, 235, 0.7);
+}
+
+.editor-btn-clear:hover {
+  background: rgba(209, 213, 219, 0.95);
+}
+
+.editor-meta {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.editor-meta span {
+  font-weight: 600;
+  color: var(--text);
+}
